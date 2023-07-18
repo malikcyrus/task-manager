@@ -17,7 +17,7 @@ The Task Manager App is a full-stack web application built with TypeScript, Node
 
 ## Getting Started
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/malikcyrus/task-manager.git`
 2. Install dependencies: `npm install`
 3. Set up environment variables: Create a `.env` file and configure the required variables (e.g., database connection string).
 4. Start the development server: `npm start`
