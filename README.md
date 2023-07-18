@@ -1,6 +1,6 @@
 # Task Manager App
 
-The Task Manager App is a full-stack web application built with TypeScript, Node.js, MongoDB Atlas, and React. It provides a user-friendly interface for managing tasks, allowing users to create, view, and delete tasks.
+The Task Manager App is a full-stack web application built with TypeScript, Node.js, MongoDB Atlas, React and BootStrap. It provides a user-friendly interface for managing tasks, allowing users to create, view, and delete tasks.
 
 ## Features
 
