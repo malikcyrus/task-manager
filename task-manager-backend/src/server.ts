@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import taskRoutes from './routes/taskRoutes';
+import authRoutes from './routes/authRoutes';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose
     console.error('Error connecting to MongoDB:', error);
   });
 
-  app.use('/api', taskRoutes);
+  app.use('/api/auth', authRoutes)
+  app.use('/api/tasks', taskRoutes);
 
 export default app;
