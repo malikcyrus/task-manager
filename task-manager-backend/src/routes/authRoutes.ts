@@ -5,15 +5,6 @@ import User, { IUser } from '../models/User';
 
 const router = express.Router();
 
-// const users = [
-//     {
-//         id: '1',
-//         name: 'John Doe',
-//         email: 'john@example.com', 
-//         password: 'ello',
-//     }
-// ];
-
 router.post('/register', async (req: Request, res: Response) => { 
     const { name, email, password} = req.body;
 

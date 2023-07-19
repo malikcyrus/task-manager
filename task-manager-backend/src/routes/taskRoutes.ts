@@ -1,9 +1,10 @@
 import express, { Request, Response } from 'express';
 import Task, { ITask } from '../models/Task';
+import { authenticateUser } from '../middleware/auth'
 
 const router = express.Router();
 
-router.get('/tasks', async (req: Request, res: Response) => {
+router.get('/', authenticateUser, async (req: Request, res: Response) => {
   try {
     const tasks: ITask[] = await Task.find();
     res.json(tasks);
@@ -13,7 +14,7 @@ router.get('/tasks', async (req: Request, res: Response) => {
   }
 });
 
-router.post('/tasks', async (req: Request, res: Response) => {
+router.post('/', authenticateUser, async (req: Request, res: Response) => {
   try {
     const { title, description } = req.body;
     const newTask: ITask = new Task({
@@ -28,7 +29,7 @@ router.post('/tasks', async (req: Request, res: Response) => {
   }
 });
 
-router.delete('/tasks/:id', async (req: Request, res: Response) => { 
+router.delete('/:id', authenticateUser, async (req: Request, res: Response) => { 
   try {
     const taskId = req.params.id;
     await Task.findByIdAndDelete(taskId);
